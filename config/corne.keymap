@@ -27,11 +27,12 @@
         compatible = "zmk,keymap";
 
         Base {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // ---------------------------------------------------------------------------------------------
+            // |  TAB |  Q     |  W      |  E  |  R  |  T  |   |  Y  |  U (Ü) |  I  |  O (Ö)  |  P  | BKSP |
+            // | CTRL |  A (Ä) |  S (ß)  |  D  |  F  |  G  |   |  H  |  J     |  K  |  L      |  ;  |  '   |
+            // | SHFT |  Z     |  X      |  C  |  V  |  B  |   |  N  |  M     |  ,  |  .      |  /  | ESC  |
+            //              | GUI | L1 | Return (Left Alt) |   | Left Control (Return) | Backspace | L2 |
+            // ---------------------------------------------------------------------------------------------
 
             bindings = <
 &kp TAB    &kp Q              &kp W        &kp E     &kp R  &kp T                  &kp Y                   &ht DE_U_UMLAUT U  &kp I      &ht DE_U_UMLAUT O  &kp P     &kp BSPC
@@ -43,10 +44,11 @@
 
         Lower {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  TAB  |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  *  |  (  |  )  |  \    |
+            // | BTCLR |  1  |  2  |  3  |  4  |  5  |      |  -  |  =  |  `  |  [  |  ]  |  |    |
+            // | SHFT  |  6  |  7  |  8  |  9  |  0  |      |  _  |  +  |  ~  |  {  |  }  |  SHFT |
+            //       | GUI |     | Return (Left Alt) |      | Left Control (Return) | Backspace |   |
+            // -----------------------------------------------------------------------------------------
 
             bindings = <
 &kp TAB           &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT         &kp CARET             &kp AMPERSAND  &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH
@@ -58,10 +60,11 @@
 
         Above {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  F1   |  F2  |  F3  |  F4  |  F5  |      |  F6  |  F7  |  F8  |  F9   |  F10 |       |
+            // | MUTE  | PREV | NEXT | VOL- | VOL+ |      | LEFT | DOWN |  UP  | RIGHT |      |       |
+            // | BTCLR | BT0  | BT1  | BT2  | BT3  |      |      |      |      |       |      |       |
+            //                       |      |      |      |      |      |      |
+            // -----------------------------------------------------------------------------------------
 
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &trans
