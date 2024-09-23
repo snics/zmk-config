@@ -27,6 +27,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        to-language-layer {
+            bindings = <&mo 3>;
+            key-positions = <24 36>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,9 +48,9 @@
             // ---------------------------------------------------------------------------------------------
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                  &kp Y                   &kp U          &kp I      &kp U    &kp P     &kp GRAVE
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G                  &kp H                   &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B                  &kp N                   &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T                  &kp Y                   &kp U          &kp I      &kp U    &kp P     &kp GRAVE
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F      &kp G                  &kp H                   &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B                  &kp N                   &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                          &kp LGUI  &mo LOWER  &ht LEFT_ALT RETURN    &ht LEFT_CONTROL SPACE  &kp BACKSPACE  &mo RAISE
             >;
         };
@@ -75,6 +84,15 @@
 &kp C_MUTE  &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans    &trans  &trans     &trans   &trans
                                         &trans        &trans        &trans          &trans    &trans    &trans
+            >;
+        };
+
+        Language {
+            bindings = <
+&trans  &trans           &trans     &kp DE_EURO  &trans  &trans    &trans  &kp DE_U_UMLAUT  &trans  &kp DE_O_UMLAUT  &trans  &trans
+&trans  &kp DE_A_UMLAUT  &kp DE_SZ  &trans       &trans  &trans    &trans  &trans           &trans  &trans           &trans  &trans
+&trans  &trans           &trans     &trans       &trans  &trans    &trans  &trans           &trans  &trans           &trans  &trans
+                                    &trans       &trans  &trans    &trans  &trans           &trans
             >;
         };
     };
