@@ -9,9 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
-#define RAISE   1
-#define LOWER   2
+#define DEFAULT     0
+#define RAISE       1
+#define LOWER       2
+#define LANGUAGE    3
 
 / {
     behaviors {
@@ -31,7 +32,7 @@
         compatible = "zmk,combos";
 
         to-language-layer {
-            bindings = <&mo 3>;
+            bindings = <&mo LANGUAGE>;
             key-positions = <24 36>;
         };
     };
